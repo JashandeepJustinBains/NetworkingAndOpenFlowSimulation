@@ -1,0 +1,27 @@
+### Who made this program
+j24bains
+Note: The code that has been used in this assignment has come from the Textbook "COMPUTER NETWORKING A TOP-DOWN APPROACH (Eighth Eidtion)" and python documentation
+
+### How to run the program
+1.
+Run script for server
+
+Number of parameters: 1
+Parameter:
+    $1: <req_code>
+
+2.
+Run script for client
+
+Number of parameters: 4
+Parameter:
+    $1: <server_address>
+    $2: <n_port>
+    $3: <req_code>
+    $4(+): message(s)
+
+### Test Machines and supported machines
+The machine that was used to build the program was j24bains@ubuntu2004-010 and tested on the following machines:
+j24bains@ubuntu2004-010, j24bains@ubuntu2004-002 and j24bains@ubuntu2004-004
+
+The program will discover the IPV4 address using the socket library so all machines are supported

@@ -1,0 +1,43 @@
+### Who made this program
+j24bains
+Note: The code that has been used in this assignment has come from the Textbook "COMPUTER NETWORKING A TOP-DOWN APPROACH (Eighth Eidtion)" and python documentation
+
+### How to run the program
+1. 
+Run (without the "")
+"comm -23 <(seq 1024 65535 | sort) <(ss -tan | awk '{print $4}' | cut -d':' -f2 | grep "[0-9]\{1,5\}" | sort -u) | shuf | head -n 4"
+in the terminal to find 4 free ports
+the ports will be referred to as A, B, C, D
+2. 
+where 
+    A,B,C,D: are free ports found previously
+    x: is the probability of dropping
+    d: is the amount of delay between packets
+    b: is to turn on or off network_emulators debugging statements
+
+Run script for network emulator without the "", 
+Number of parameters: 8
+
+    "./network_emulator.sh A localhost D C localhost B d x b"
+
+3. 
+Run script for receiver program (without "")
+Number of parameters: 4
+
+    "./receiver.sh localhost C D output.txt
+
+4. 
+Where
+    to: is the duration before timing out
+    input: is the input file to send to receiver (will be copied to output.txt) 
+Run script for receiver program (without "")
+Number of parameters: 4
+
+    "./sender.sh localhost A B to input
+
+
+
+### Test Machines and supported machines
+The machine that was used to build the program was j24bains@ubuntu2004-008 and tested using localhost as the host for each program
+To use without localhost (across different machines) we would need to find out the IPV4 address on all machines before running
+which I am not capable of doing
